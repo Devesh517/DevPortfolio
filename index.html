@@ -3,539 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-     body{
-      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #eaf6fb;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-   margin-top: -150px; 
-  flex-wrap: wrap;
-}
-.social-links a img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background: #1a2636;
-  border: 2px solid #00c9ff;
-}
-.social-links a:hover img {
-  transform: scale(1.2) rotate(-8deg);
-  box-shadow: 0 6px 16px #00c9ff99;
-  filter: brightness(1.3) drop-shadow(0 0 8px #00c9ff);
-}
-.separator {
-  height: 4px;
-  margin: 0;
-  border: none;
-  background: linear-gradient(90deg, #00c9ff, #4b2e83, #00c9ff);
-  animation: shimmer 3s linear infinite;
-  box-shadow: 0 0 16px #00c9ff;
-  border-radius: 2px;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  background: rgba(15,32,39,0.95);
-  z-index: 1000;
-  box-shadow: 0 2px 8px #00c9ff22;
-}
-.navbar a:hover{
-  color: #a084ee;
-  text-shadow: 0 2px 8px #00c9ff44;
-}
-a{
-  text-decoration: none;
-  color: #00c9ff;
-  transition: color 0.2s;
-}
-#home{
-  margin: auto;
-  align-items: center;
-  font-size: 30px;
-  display: flex;
-  justify-content: space-around;
-  padding: 100px 50px;
-  flex-wrap: wrap;
-  gap: 40px;
-  background: linear-gradient(120deg, #232526 0%, #414345 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px #00c9ff22;
-  color: #eaf6fb;
-}
-#ph1{
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s;
-  border: 4px solid #00c9ff;
-  background: #1a2636;
-}
-#ph1:hover {
-  transform: scale(1.05) rotate(-2deg);
-  box-shadow: 0 16px 48px rgba(0,201,255,0.18);
-}
-#about{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-right: 50px;
-  font-size: 25px;
-  background: rgba(44,83,100,0.7);
-  border-radius: 18px;
-  color: #eaf6fb;
-}
-.skills {
-  padding: 80px 40px;
-  color: #eaf6fb;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #232526 0%, #2c5364 100%);
-}
-.skills h1, .skills h3 {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 40px;
-  color: #00c9ff;
-  text-shadow: 0 2px 8px #4b2e8344;
-}
-.skills h3 {
-  font-size: 24px;
-  margin: 30px 20px 15px;
-  color: #ffeecc;
-}
-.skills-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-.skl {
-  background: rgba(44,83,100,0.85);
-  color: #eaf6fb;
-  width: 140px;
-  height: 150px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px #00c9ff22;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s, background 0.3s, color 0.3s;
-  text-align: center;
-  font-weight: 600;
-  cursor: pointer;
-  border: 1.5px solid #00c9ff;
-}
-.skl img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  transition: transform 0.3s;
-}
-.skl:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 12px 24px #00c9ff55;
-  background: linear-gradient(135deg, #00c9ff 60%, #4b2e83 100%);
-  color: #fff;
-}
-.skl:hover img {
-  transform: rotate(8deg) scale(1.1);
-}
-#certify{
-  padding-top: 100px;
-  background: rgba(44,83,100,0.7);
-  border-radius: 18px;
-}
-#container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.certificate{
-  height: 400px;
-  width: 350px;
-  border-radius: 20px;
-  background-color: white;
-  margin: 15px 10px;
-  border-radius: 13px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-  box-shadow: 0 4px 16px #00c9ff22;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(135deg, #232526 0%, #2c5364 100%);
-  color: #eaf6fb;
-  border: 2px solid #00c9ff44;
-}
-.certificate:hover {
-  transform: translateY(-9px) scale(1.03);
-  box-shadow: 0 10px 22px rgba(0, 201, 255, 0.18);
-}
-.certificate img{
-  height: 220px; 
-  width: 100%;
-  object-fit: cover;
-}
-.certificate h1{
-  margin: 16px 0 0 0;
-  font-size: 22px;
-  text-align: center;
-  color: #00c9ff;
-}
-.certificate p{
-  margin: 0 0 8px 0;
-  font-size: 18px;
-  text-align: center;
-}
-.certificate a{
-  color: #a084ee;
-}
-.certificate a:hover{
-  color: #00c9ff;
-  text-decoration: underline;
-}
-#project {
-      padding: 80px 20px;
-      background: rgba(44, 83, 100, 0.7);
-      border-radius: 18px;
-      box-shadow: 0 8px 32px #00c9ff22;
-    }
-
-    #boxmain {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .box {
-      background: linear-gradient(135deg, #232526 0%, #2c5364 100%);
-      color: #eaf6fb;
-      border: 2px solid #00c9ff44;
-      box-shadow: 0 4px 16px #00c9ff22;
-      border-radius: 18px;
-      width: 30rem;
-      padding: 20px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .box h1 {
-      color: #00c9ff;
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .box p {
-      text-align: center;
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .box ul {
-      /* margin-left: 20px; */
-      padding: 0;
-      /* margin-bottom: 10px; */
-    }
-
-    .box li {
-      margin-bottom: 6px;
-      /* line-height: 1.5; */
-      /* word-break: break-word; */
-    }
-
-    .box h4 {
-      color: #aeeaff;
-      margin-left: 10px;
-      margin-bottom: 6px;
-    }
-
-    .box a {
-      align-self: center;
-      color: #a084ee;
-      background: #1a2636;
-      border: 1px solid #00c9ff44;
-      width: 6rem;
-      border-radius: 6px;
-      text-align: center;
-      text-decoration: none;
-      padding: 6px 10px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .box a:hover {
-      background: #00c9ff;
-      color: #232526;
-      transform: translateY(-9px) scale(1.03);
-    }
-
-    @media (max-width: 900px) {
-      .box {
-        width: 90vw;
-      }
-
-      .box h1 {
-        font-size: 18px;
-      }
-
-      .box p, .box li {
-        font-size: 7px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .box {
-        width: 95vw;
-      }
-
-      .box h1 {
-        font-size: 17px;
-      }
-
-      .box h4 {
-        font-size: 15px;
-      }
-
-      .box a {
-        font-size: 13px;
-        padding: 5px 10px;
-      }
-    }
-#contact{
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
-  background: rgba(44,83,100,0.7);
-  border-radius: 18px;
-  color: #eaf6fb;
-}
-#contact input, #contact textarea {
-  width: 90%;
-  max-width: 400px;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #00c9ff; 
-  outline: none;
-  transition: border-bottom-color 0.3s ease;
-  background: #1a2636;
-  color: #eaf6fb;
-}
-#contact input:focus, #contact textarea:focus {
-  border-bottom: 2px solid #a084ee;
-  background: #232526;
-  color: #fff;
-}
-#btn1{
-  padding: 12px 24px;
-  background: linear-gradient(90deg, #00c9ff 60%, #4b2e83 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background .3s, transform 0.2s;
-  margin-top: 20px;
-  box-shadow: 0 2px 8px #00c9ff44;
-}
-#btn1:hover {
-  background: linear-gradient(90deg, #4b2e83 60%, #00c9ff 100%);
-  color: #fff;
-  box-shadow: 0 4px 16px #00c9ff88;
-  transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  #home {
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 10px;
-    font-size: 26px;
-  }
-  #ph1 {
-    width: 300px;
-    height: 300px;
-  }
-  .skills {
-    padding: 60px 10px;
-  }
-}
-@media (max-width: 900px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .navbar {
-    flex-direction: column;
-    padding: 10px 5px;
-  }
-  #mainbox, #container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .box, .certificate {
-    width: 90vw;
-    min-width: 220px;
-    max-width: 400px;
-    height: auto;
-  }
-  #ph1 {
-    width: 220px;
-    height: 220px;
-  }
-  #mainbox {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  .box {
-    width: 96vw;
-    min-width: 120px;
-    max-width: 98vw;
-    height: auto;
-    padding: 18px 6vw 18px 6vw;
-  }
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-  }
-  .navbar ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  .navbar {
-    flex-direction: column;
-    padding: 5px 2px;
-  }
-  li {
-    font-size: 18px;
-    padding: 8px;
-  }
-  #home {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 2vw;
-    font-size: 18px;
-    gap: 20px;
-  }
-  #ph1 {
-    width: 120px;
-    height: 120px;
-  }
-  .skills h1 {
-    font-size: 28px;
-  }
-  .skills h3 {
-    font-size: 18px;
-  }
-  .skills-group {
-    gap: 10px;
-  }
-  .skl {
-    width: 90px;
-    height: 90px;
-    font-size: 12px;
-  }
-  .skl img {
-    width: 32px;
-    height: 32px;
-  }
-  .certificate, .box {
-    width: 98vw;
-    min-width: 120px;
-    max-width: 98vw;
-    height: auto;
-    font-size: 13px;
-  }
-  .certificate img {
-    height: 100px;
-  }
-  #contact input, #contact textarea {
-    max-width: 98vw;
-    font-size: 13px;
-    padding: 8px;
-  }
-  #btn1 {
-    font-size: 13px;
-    padding: 8px 16px;
-  }
-}
-    </style>
-    
-
+    <title>DevPortfolio</title>
+    <link rel="icon" type="image/png" href="Images/icon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/st.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div></div>
-            <ul style="display: flex; gap: 60px; margin: 0; padding: 0; list-style: none;
-
-  padding: 10px;
-  font-size: 25px;
-  color: #eaf6fb;">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certify">Certification</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-    </nav>
-    <section id="home">
+  <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <div>
+      <!-- NAV BAR -->
+        <section id="navbar1">
+            <nav class="navbar">
+                <div class="navcontainer">
+                     <a href="#" class="logo"><img src="Images/icon2.png" alt=""></a>
+                    <button class="navtoggle" id="navToggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="navmenu" id="navMenu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about" class="active">About</a></li>
+                        <li><a href="#skills" class="active">Skills</a></li>
+                        <li><a href="#certify" class="active">Certificate</a></li>
+                        <li><a href="#project" class="active">Projects</a></li>
+                        <li><a href="#contact" class="active">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <!-- Home Section -->
+        <section id="home">
+            <div id="mainhome">
+            <div id="leftsection" class="slide-in-left">
        <img src="Images/img1.png" alt="" id="ph1">
-        <div align="right">
-         Hi, I'm Devesh — a tech enthusiast passionate about building a strong <br>
-foundation in hybrid mobile application development using Flutter. <br>
-I'm actively working on mastering Java and Dart, while also exploring <br>
-powerful frameworks like Spring Boot. I enjoy solving coding challenges on <br>
-HackerRank to sharpen my problem-solving skills. <br>
-Over the past 2 years of my BCA journey, I’ve developed several <br>
-projects using various programming languages and frameworks. <br>
+       </div>
+        <div id="rightsection" class="slide-in-right">
+         <b>Hi, I'm Devesh</b> — a tech enthusiast passionate <br> about building a strong 
+foundation in  hybrid mobile <br> application development  using Flutter. 
+I'm actively <br> working on mastering Java and Dart. 
+ I enjoy solving <br> coding challenges on 
+HackerRank to  sharpen my <br> problem-solving  skills. 
+Over the past 2 years  of my <br> BCA journey, I’ve developed several 
+projects using <br> various programming languages and frameworks. <br>
 Scroll down to explore my skills and some of the work I’ve done!
            </div>
+           </div>
     </section>
-    <br><section>
-   <br><br><div class="social-links" >
+    <!-- Social Links Section -->
+    <section id="social">
+   <div class="social-links" >
       <a href="https://github.com/Devesh517" target="_blank">
         <img src="Images/github.png" alt="GitHub">
         
@@ -558,32 +83,29 @@ Scroll down to explore my skills and some of the work I’ve done!
       </a>
     </div>
 </section>
-
-    <hr class="separator">
-    <section id="about" >
-        <div align="center">
+    <!-- About Section -->
+    <section id="home2">
+<section id="about" >
+        <div id="content" class="fade-in">
           I am Devesh Dhanwani, curious about tech and coding, pursuing  BCA to learn more about <br>
 programming and coding. I got interested in this field when I attended the career guidance session <br>
 in my school, where I got to know about editing and designing. While exploring and editing & designing, <br>
 I learned about coding, website development, and app development. From there, I decided to make my career in tech. <br>
-
 From the start of the second year, I loved solving questions in Java. Java became my favorite from then on. <br>
 From there, I decided to build a strong foundation in Java and master the concepts of Java. <br>
 I am interested in Mobile Application Development, especially for Android and hybrid application <br>
 development. That’s why I started learning Dart and Flutter. I decided to make projects in it also. <br>
-
 Right now, I am making a strong base in Dart, Flutter, Java, and a little bit of DSA also. <br>
 I am also active on platforms like HackerRank — one of the best platforms. That helps me to sharpen my <br>
 skills and problem-solving ability. I can even show the earned badges and certificates on LinkedIn. <br>
 I want to become a Mobile Application Developer and am eager to learn about different technologies <br>
 like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybersecurity. I want to know more about that.
-
         </div>
-    </section> 
-     <hr class="separator">
-<section id="skills" class="skills">
-  <h1>Skills</h1>
-
+    </section>
+     <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="fade-in">
+            <h1>Skills</h1>
   <h3>Language</h3>
   <div class="skills-group">
     <span class="skl"><img src="Images/java.png" alt="Java">Java</span>
@@ -598,7 +120,6 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
     <span class="skl"><img src="Images/css-3.png" alt="CSS">CSS</span>
     <!-- <span class="skl"><img src="Images/js.png" alt="JavaScript">JavaScript</span> -->
   </div>
-
   <h3>Tools</h3>
   <div class="skills-group">
     <span class="skl"><img src="Images/github.png" alt="GitHub">GitHub</span>
@@ -606,13 +127,11 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
     <span class="skl"><img src="Images/eclipse.png" alt="Eclipse">Eclipse</span>
     <span class="skl"><img src="Images/vscode.png" alt="VS Code">VS Code</span>
   </div>
-
   <h3>Database</h3>
   <div class="skills-group">
     <span class="skl"><img src="Images/mysql.png" alt="MySQL">MySQL</span>
     <!-- <span class="skl"><img src="Images/supabase.png" alt="Supabase">Supabase</span> -->
   </div>
-
   <h3>Soft Skills</h3>
   <div class="skills-group">
     <span class="skl">Problem Solving</span>
@@ -620,11 +139,12 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
     <span class="skl">Time Management</span>
     <span class="skl">Good Communication</span>
   </div>
-</section>
- <hr class="separator">
+        </div>
+    </section>
+    <!-- Certificate -->
     <section id="certify">
       <div id="container">
-        <br><div class="certificate">
+        <div class="certificate fade-in">
           <img src="Images/hkerrank.png" alt="" >
          <h1> Certificate Of Accomplishment</h1>
         <p> Issued By : <a href="https://www.hackerrank.com/dashboard" >HackerRank</a> <br>
@@ -639,7 +159,7 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
          Certificate-ID : <a href="https://cert.diceid.com/cid/BV5a8J0dna" >CRZ91064</a>
           
         </div> -->
-       <br> <div class="certificate">
+       <br> <div class="certificate fade-in">
          <img src="Images/training.png" alt="" >
          <h1> Certificate Of Training</h1>
          <p>Issued By : <a href="https://corizo.in/" >Corizo</a> <br>
@@ -648,12 +168,12 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
          
         </div><br>
       </div><br>
-    </section> 
-     <hr class="separator">
+    </section>
+    <!-- Projects -->
        <section id="project">
     <div id="boxmain">
       <!-- Project 1 -->
-      <div class="box">
+      <div class="box fade-in">
         <h1>Bio Track – Smart Health Monitoring System</h1>
         <p>A Java and SQL-based health monitoring system developed for my Identity Exhibition.</p>
         <ul>
@@ -670,9 +190,8 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
         </ul>
         <a href="https://github.com/Devesh517/Bio-Track">View Code</a>
       </div>
-
       <!-- Project 2 -->
-      <div class="box">
+      <div class="box fade-in">
         <h1>SmartEdit</h1>
         <p>Created a project in VB.Net in which you can write notes and anything you want. Named SmartEdit.</p>
         <ul>
@@ -685,9 +204,8 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
         </ul>
         <a href="https://github.com/Devesh517/Notepad">View Code</a>
       </div>
-
       <!-- Project 3 -->
-      <div class="box">
+      <div class="box fade-in">
         <h1>String, Array & Pattern Operations – Java Program</h1>
         <p>A self-contained Java program that demonstrates core logic-building concepts:</p>
         <ul>
@@ -703,15 +221,31 @@ like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybe
       </div>
     </div>
   </section>
-     <hr class="separator">
-    <section id="contact">
-      <h1 style="margin: 0;" align="center">Let's Connect</h1>
-      <form name="contact " method="Post" data-netify="true">
-      <input type="text"placeholder="Enter Your Name" ><br>
-      <input type="text"placeholder="Enter Email" ><br>
-      <input type="text"placeholder="Enter Your Messgae" ><br>
-      <button id="btn1">Send Message</button></form>
+  <!-- Contact Section -->
+  <section id="contact">
+     <form class="contact-form fade-in" action="https://formsubmit.co/devesh.dhanwani2005@gmail.com" method="POST">
+    <h2>Contact Me</h2>
+
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" name="email" id="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+  
       </section>
-    
+    </div>
 </body>
+<script src="JS/ab.js" ></script>
 </html>
