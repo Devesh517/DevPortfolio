@@ -7,245 +7,363 @@
     <link rel="icon" type="image/png" href="Images/icon1.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/st.css">
+    <link rel="stylesheet" href="./CSS/st.css">
 </head>
 <body>
   <!-- Loading Screen -->
     <div class="loading" id="loading">
         <div class="spinner"></div>
     </div>
+    
     <!-- Scroll to top button -->
     <div class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </div>
+    
     <div>
       <!-- NAV BAR -->
-        <section id="navbar1">
+        <section id="BAR">
             <nav class="navbar">
                 <div class="navcontainer">
-                     <a href="#" class="logo"><img src="Images/icon2.png" alt=""></a>
+                    <a href="#" class="logo"><img src="Images/icon2.png" alt="Logo"></a>
+                    <ul class="navmenu" id="navMenu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#certify" class="nav-link">Certificate</a></li>
+                        <li><a href="#project" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
                     <button class="navtoggle" id="navToggle">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </button>
-                    <ul class="navmenu" id="navMenu">
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#about" class="active">About</a></li>
-                        <li><a href="#skills" class="active">Skills</a></li>
-                        <li><a href="#certify" class="active">Certificate</a></li>
-                        <li><a href="#project" class="active">Projects</a></li>
-                        <li><a href="#contact" class="active">Contact Me</a></li>
-                    </ul>
                 </div>
             </nav>
         </section>
+        
         <!-- Home Section -->
         <section id="home">
             <div id="mainhome">
-            <div id="leftsection" class="slide-in-left">
-       <img src="Images/img1.png" alt="" id="ph1">
-       </div>
-        <div id="rightsection" class="slide-in-right">
-         <b>Hi, I'm Devesh</b> — a tech enthusiast passionate <br> about building a strong 
-foundation in  hybrid mobile <br> application development  using Flutter. 
-I'm actively <br> working on mastering Java and Dart. 
- I enjoy solving <br> coding challenges on 
-HackerRank to  sharpen my <br> problem-solving  skills. 
-Over the past 2 years  of my <br> BCA journey, I’ve developed several 
-projects using <br> various programming languages and frameworks. <br>
-Scroll down to explore my skills and some of the work I’ve done!
-           </div>
-           </div>
-    </section>
-    <!-- Social Links Section -->
-    <section id="social">
-   <div class="social-links" >
-      <a href="https://github.com/Devesh517" target="_blank">
-        <img src="Images/github.png" alt="GitHub">
+                <div id="leftsection" class="slide-in-left">
+                    <img src="Images/img1.png" alt="Devesh" id="ph1">
+                </div>
+                <div id="rightsection" class="slide-in-right">
+                    <h1><b>Hi, I'm Devesh</b></h1>
+                    <p>— a tech enthusiast passionate about building a strong foundation in hybrid mobile application development using Flutter. I'm actively working on mastering Java and Dart. I enjoy solving coding challenges on HackerRank to sharpen my problem-solving skills. Over the past 2 years of my BCA journey, I've developed several projects using various programming languages and frameworks. Scroll down to explore my skills and some of the work I've done!</p>
+                </div>
+            </div>
+        </section>
         
-      </a>
-      <a href="https://www.linkedin.com/in/devesh-dhanwani-9351a2312/" target="_blank">
-        <img src="Images/linkedin.png" alt="LinkedIn">
-    
-      </a>
-      <a href="https://x.com/DhanwaniDe33509" target="_blank">
-        <img src="Images/twitter.png" alt="Twitter">
-      
-      </a>
-      <a href="https://www.instagram.com/dhanwani_devesh_12" target="_blank">
-        <img src="Images/insta.png" alt="Instagram">
+        <!-- Social Links Section -->
+        <section id="social">
+            <div class="social-links">
+                <a href="https://github.com/Devesh517" target="_blank">
+                    <img src="Images/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/devesh-dhanwani-9351a2312/" target="_blank">
+                    <img src="Images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/DhanwaniDe33509" target="_blank">
+                    <img src="Images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/dhanwani_devesh_12" target="_blank">
+                    <img src="Images/insta.png" alt="Instagram">
+                </a>
+                <a href="https://www.hackerrank.com/profile/devesh_dhanwani1" target="_blank">
+                    <img src="Images/hackerrank.png" alt="HackerRank">
+                </a>
+            </div>
+        </section>
         
-      </a>
-      <a href="https://www.hackerrank.com/profile/devesh_dhanwani1" target="_blank">
-        <img src="Images/hackerrank.png" alt="HackerRank">
+        <!-- About Section -->
+        <section id="about">
+            <div id="content" class="fade-in">
+                <h1>About Me</h1>
+                <p>I am Devesh Dhanwani, curious about tech and coding, pursuing BCA to learn more about programming and coding.
+                    I got interested in this field when I attended the career guidance session in my school, where I got to know
+                    about editing and designing. While exploring and editing & designing, I know about coding, website development,
+                    and app development. <br><br> From there, I decided to make my career in tech. From the start of the second year,
+                    I loved solving questions in Java. Java became my favorite from then on. From there, I decided to build a strong
+                    foundation in Java and master the concepts of Java. I am interested in Mobile Application Development, especially
+                    for Android and hybrid application development. That's why I started learning Dart and Flutter. <br><br>I decided
+                    to make projects in it also. Right now, I am making a strong base in Dart, Flutter, Java, and a little bit of DSA
+                    also. I am also active on platforms like HackerRank — one of the best platforms. That helps me to sharpen my skills
+                    and problem-solving ability. I can even show the earned badges and certificates on LinkedIn. I want to become a Mobile
+                    Application Developer and am eager to learn about different technologies like Firebase and Spring Boot. Outside of that,
+                    I also enjoy learning about cybersecurity. I want to know more about that.</p>
+            </div>
+        </section>
         
-      </a>
-    </div>
-</section>
-    <!-- About Section -->
-    <section id="home2">
-<section id="about" >
-        <div id="content" class="fade-in">
-          I am Devesh Dhanwani, curious about tech and coding, pursuing  BCA to learn more about <br>
-programming and coding. I got interested in this field when I attended the career guidance session <br>
-in my school, where I got to know about editing and designing. While exploring and editing & designing, <br>
-I learned about coding, website development, and app development. From there, I decided to make my career in tech. <br>
-From the start of the second year, I loved solving questions in Java. Java became my favorite from then on. <br>
-From there, I decided to build a strong foundation in Java and master the concepts of Java. <br>
-I am interested in Mobile Application Development, especially for Android and hybrid application <br>
-development. That’s why I started learning Dart and Flutter. I decided to make projects in it also. <br>
-Right now, I am making a strong base in Dart, Flutter, Java, and a little bit of DSA also. <br>
-I am also active on platforms like HackerRank — one of the best platforms. That helps me to sharpen my <br>
-skills and problem-solving ability. I can even show the earned badges and certificates on LinkedIn. <br>
-I want to become a Mobile Application Developer and am eager to learn about different technologies <br>
-like Firebase and Spring Boot. Outside of that, I also enjoy learning about cybersecurity. I want to know more about that.
-        </div>
-    </section>
-     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="fade-in">
-            <h1>Skills</h1>
-  <h3>Language</h3>
-  <div class="skills-group">
-    <span class="skl"><img src="Images/java.png" alt="Java">Java</span>
-    <span class="skl"><img src="Images/sql.png" alt="SQL">SQL</span>
-    <span class="skl"><img src="Images/dart.png" alt="Dart">Dart</span>
-    <span class="skl"><img src="Images/c.png" alt="C">C</span>
-    <span class="skl"><img src="Images/c++.png" alt="C++">C++</span>
-    <!-- <span class="skl"><img src="Images/vb.net.png" alt="VB.NET">VB.NET</span>
-    <span class="skl"><img src="Images/python.png" alt="Python">Python</span>
-    <span class="skl"><img src="Images/shell.png" alt="Linux">Linux Shell</span> -->
-    <span class="skl"><img src="Images/html-5 (1).png" alt="HTML">HTML</span>
-    <span class="skl"><img src="Images/css-3.png" alt="CSS">CSS</span>
-    <!-- <span class="skl"><img src="Images/js.png" alt="JavaScript">JavaScript</span> -->
-  </div>
-  <h3>Tools</h3>
-  <div class="skills-group">
-    <span class="skl"><img src="Images/github.png" alt="GitHub">GitHub</span>
-    <span class="skl"><img src="Images/as.png" alt="Android Studio">Android Studio</span>
-    <span class="skl"><img src="Images/eclipse.png" alt="Eclipse">Eclipse</span>
-    <span class="skl"><img src="Images/vscode.png" alt="VS Code">VS Code</span>
-  </div>
-  <h3>Database</h3>
-  <div class="skills-group">
-    <span class="skl"><img src="Images/mysql.png" alt="MySQL">MySQL</span>
-    <!-- <span class="skl"><img src="Images/supabase.png" alt="Supabase">Supabase</span> -->
-  </div>
-  <h3>Soft Skills</h3>
-  <div class="skills-group">
-    <span class="skl">Problem Solving</span>
-    <span class="skl">Team Work</span>
-    <span class="skl">Time Management</span>
-    <span class="skl">Good Communication</span>
-  </div>
-        </div>
-    </section>
-    <!-- Certificate -->
-    <section id="certify">
-      <div id="container">
-        <div class="certificate fade-in">
-          <img src="Images/hkerrank.png" alt="" >
-         <h1> Certificate Of Accomplishment</h1>
-        <p> Issued By : <a href="https://www.hackerrank.com/dashboard" >HackerRank</a> <br>
-         Skill : Java <br>
-         
-        </div>
-       <!-- <br> <div class="certificate">
-         <img src="Images/intern.png" alt="" >
-         <h1>Certificate of Internship</h1>
-         <p>Issued By : <a href="https://corizo.in/" >Corizo</a> <br>
-         Skill : Basic Knowledge of Kali and some tools like Nikto Nmap <br>
-         Certificate-ID : <a href="https://cert.diceid.com/cid/BV5a8J0dna" >CRZ91064</a>
-          
-        </div> -->
-       <br> <div class="certificate fade-in">
-         <img src="Images/training.png" alt="" >
-         <h1> Certificate Of Training</h1>
-         <p>Issued By : <a href="https://corizo.in/" >Corizo</a> <br>
-         Skill : Kali Linux <br>
-         Certificate-ID : <a href="https://cert.diceid.com/cid/ePQiNLk5q4" >CRZ86901</a><br>
-         
-        </div><br>
-      </div><br>
-    </section>
-    <!-- Projects -->
-       <section id="project">
-    <div id="boxmain">
-      <!-- Project 1 -->
-      <div class="box fade-in">
-        <h1>Bio Track – Smart Health Monitoring System</h1>
-        <p>A Java and SQL-based health monitoring system developed for my Identity Exhibition.</p>
-        <ul>
-          <li>Supports 5 languages: English, Hindi, Bengali, Tamil, and Telugu</li>
-          <li>Stores and analyzes key health records like heart rate, blood pressure, and sugar levels</li>
-          <li>User-friendly access using unique user ID</li>
-        </ul>
-        <h4>Tech Used</h4>
-        <ul>
-          <li>Java</li>
-          <li>SQL</li>
-          <li>XAMPP</li>
-          <li>Eclipse</li>
-        </ul>
-        <a href="https://github.com/Devesh517/Bio-Track">View Code</a>
-      </div>
-      <!-- Project 2 -->
-      <div class="box fade-in">
-        <h1>SmartEdit</h1>
-        <p>Created a project in VB.Net in which you can write notes and anything you want. Named SmartEdit.</p>
-        <ul>
-          <li>Features: Dark Mode, Font Styling</li>
-          <li>Save files in multiple formats like .txt, .doc</li>
-        </ul>
-        <h4>Tech Used</h4>
-        <ul>
-          <li>VB.NET</li>
-        </ul>
-        <a href="https://github.com/Devesh517/Notepad">View Code</a>
-      </div>
-      <!-- Project 3 -->
-      <div class="box fade-in">
-        <h1>String, Array & Pattern Operations – Java Program</h1>
-        <p>A self-contained Java program that demonstrates core logic-building concepts:</p>
-        <ul>
-          <li>String Operations: reverse, word order reverse, capitalize first letters</li>
-          <li>Array Operations: Sorting (Bubble, Selection), Insertion, Deletion, Search (Binary & Linear)</li>
-          <li>Pattern Printing: K-pattern, triangle, reverse triangle, and more (9+ patterns)</li>
-        </ul>
-        <h4>Tech Used</h4>
-        <ul>
-          <li>Java</li>
-        </ul>
-        <a href="https://github.com/Devesh517/Project1">View Code</a>
-      </div>
-    </div>
-  </section>
-  <!-- Contact Section -->
-  <section id="contact">
-     <form class="contact-form fade-in" action="https://formsubmit.co/devesh.dhanwani2005@gmail.com" method="POST">
-    <h2>Contact Me</h2>
-
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required />
-    </div>
-
-    <div class="form-group">
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required />
-    </div>
-
-    <div class="form-group">
-      <label for="message">Your Message</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit">Send Message</button>
-  </form>
-  
-      </section>
-    </div>
-</body>
-<script src="JS/ab.js" ></script>
-</html>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="fade-in">
+                <h1>Skills</h1>
+                <h3>Language</h3>
+                <div class="skills-group">
+                    <span class="skl"><img src="Images/java.png" alt="Java">Java</span>
+                    <span class="skl"><img src="Images/sql.png" alt="SQL">SQL</span>
+                    <span class="skl"><img src="Images/c.png" alt="C">C</span>
+                    <span class="skl"><img src="Images/c++.png" alt="C++">C++</span>
+                    <span class="skl"><img src="Images/html-5 (1).png" alt="HTML">HTML</span>
+                    <span class="skl"><img src="Images/css-3.png" alt="CSS">CSS</span>
+                </div>
+                <h3>Tools</h3>
+                <div class="skills-group">
+                    <span class="skl"><img src="Images/github.png" alt="GitHub">GitHub</span>
+                    <span class="skl"><img src="Images/as.png" alt="Android Studio">Android Studio</span>
+                    <span class="skl"><img src="Images/eclipse.png" alt="Eclipse">Eclipse</span>
+                    <span class="skl"><img src="Images/vscode.png" alt="VS Code">VS Code</span>
+                </div>
+                <h3>Database</h3>
+                <div class="skills-group">
+                    <span class="skl"><img src="Images/mysql.png" alt="MySQL">MySQL</span>
+                </div>
+                <h3>Soft Skills</h3>
+                <div class="skills-group">
+                    <span class="skl">Problem Solving</span>
+                    <span class="skl">Team Work</span>
+                    <span class="skl">Time Management</span>
+                    <span class="skl">Good Communication</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certificate -->
+        <section id="certify">
+            <div class="container">
+                <div class="heading">
+                    <h1>Certificates</h1>
+                </div>
+                <div class="holder">
+                    <div class="box">
+                        <div class="certificate-image">
+                            <img src="./Images/hkerrank.png" alt="HackerRank Certificate">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Certificate of Accomplishment</h3>
+                            <div class="certificate-details">
+                                <p><strong>Issued By:</strong> <a href="https://www.hackerrank.com/dashboard" class="certificate-link" target="_blank">HackerRank</a></p>
+                                <p><strong>Skill:</strong> Java</p>
+                                <!-- <p>Demonstrated proficiency in Java programming through comprehensive assessment.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="certificate-image">
+                            <img src="./Images/sqlctft.png" alt="HackerRank Certificate">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Certificate of Training</h3>
+                            <div class="certificate-details">
+                                <p><strong>Issued By:</strong> <a href="https://www.hackerrank.com/dashboard" class="certificate-link" target="_blank">HackerRank</a></p>
+                                <p><strong>Skill:</strong> SQL</p>
+                                <!-- <p><strong>Certificate ID:</strong> <a href="https://cert.diceid.com/cid/ePQiNLk5q4" class="certificate-link" target="_blank">CRZ86901</a></p> -->
+                                <!-- <p>Completed comprehensive training in Kali Linux and cybersecurity fundamentals.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects -->
+        <section id="project">
+            <div class="pjc">
+                <div class="pjh">
+                    <h1>Projects</h1>
+                </div>
+                <div class="pjb">
+                    <div class="major">
+                        <h3>Major Projects</h3>
+                        <div class="pjcontent">
+                            <h3 class="project-title">Bio Track – Smart Health Monitoring System</h3>
+                            <p class="project-description">A comprehensive Java and SQL-based health monitoring system developed for Identity Exhibition, featuring multi-language support and advanced health analytics.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Multi-language support(English, Hindi, Bengali, Tamil, Telugu)</li>
+                                    <li>Comprehensive health record management</li>
+                                    <li>Real-time monitoring of vital signs</li>
+                                    <li>Secure user authentication system</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">XAMPP</span>
+                                <span class="tech-tag">Eclipse</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/Bio-Track" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                        <div class="pjcontent">
+                            <h3 class="project-title">Rewear</h3>
+                            <p class="project-description">A web-based platform designed to promote sustainable fashion by enabling users to exchange, swap, and donate unused clothes within a community.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Swap unused clothes with others</li>
+                                    <li>Donate clothes instead of throwing them away</li>
+                                    <li>Earn points for each swap, which can be redeemed later</li>
+                                    <li>Build a community that promotes eco-friendly fashion choices</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Java Script</span>
+                                <span class="tech-tag">Supabase</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/OdooHackthon" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Minor Projects</h3>
+                        <div class="pjcontent">
+                            <h3 class="project-title">SmartEdit</h3>
+                            <p class="project-description">SMARTEDIT is a lightweight text editor designed to
+                                provide a simple yet powerful alternative to the default Notepad.It allows users to 
+                                create, edit, and save text documents with additional customization features</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Create, open, and edit text document</li>
+                                    <li>Save files as .txt and .doc formats</li>
+                                    <li>Standard editing options (cut, copy, paste, undo, redo)</li>
+                                    <li>Color customization – change text and background colors</li>
+                                    <li>Open File Dialog & Save File Dialog integration</li>
+                                    <li>Dark and Light Mode Theme Option</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">VB.NET</span>
+                                <span class="tech-tag">Windows Forms</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/Notepad" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                        <div class="pjcontent">
+                            <h3 class="project-title">String, Array & Pattern Operations</h3>
+                            <p class="project-description">This project allows the user to choose between String Operations, Array Operations, and Pattern Printing.
+After selecting a category, the user can input data and choose specific operations to perform.</p>
+                            <div class="project-features">
+                                <h4>Basic Operation:</h4>
+                                <ul>
+                                    <li>String Operations: reverse, word order reverse, capitalize first letters</li>
+                                    <li>Array Operations: Sorting (Bubble, Selection), Insertion, Deletion, Search (Binary & Linear)</li>
+                                    <li>Pattern Printing: K-pattern, triangle, reverse triangle, and more (9+ patterns)</li>
+                                    <li>Return to the main screen, Change input and Change operation</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/Project1" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                        <div class="pjcontent">
+                            <h3 class="project-title">Virasat Cafe</h3>
+                            <p class="project-description">A modern, elegant, and responsive website for Virasat Café, designed to give
+                                visitors a warm and inviting experience of Indian café culture.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li> Landing Page with home section introducing Virasat Café</li>
+                                    <li>About Section – Story and vision behind the café</li>
+                                    <li>Menu Section – Curated café specials with elegant styling</li>
+                                    <li> Gallery Section – Showcase of food, ambiance, and café vibes</li>
+                                    <li>Contact Section – Café address, social links, and quick contact form</li>
+                                    <li>Responsive design for desktop and mobile screens</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Java Script</span>
+                                <span class="tech-tag">Git Hub Pages(For Hosting)</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/Virasat-Cafe" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="https://devesh517.github.io/Virasat-Cafe/" class="btn btn-primary" target="_blank" style="margin-top: 5px;">
+                                
+                                Live Demo
+                            </a>
+                        </div>
+                        <div class="pjcontent">
+                            <h3 class="project-title">Go Green</h3>
+                            <p class="project-description">GO-Green is a responsive and user-friendly website designed to educate and
+                                encourage people to adopt eco-friendly habits. The website provides information about sustainability,
+                                showcases eco-friendly initiatives, and allows users to get in touch with us.This project was developed for our college
+                                hackathon by Devesh Dhanwani and Harpreet Kaur to promote awareness about sustainable living and eco-friendly practices.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Fully responsive design for desktops, tablets, and mobile devices.</li>
+                                    <li>Clean, user-friendly UI with intuitive navigation.</li>
+                                    <li>Informative content focused on sustainability and social responsibility.</li>
+                                    <li>Interactive contact form for easy communication.</li>
+                                    <li>Organized gallery to display images and eco-friendly initiatives.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Java Script</span>
+                            </div>
+                            <a href="https://github.com/Devesh517/Notepad" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="https://devesh517.github.io/Virasat-Cafe/" class="btn btn-primary" target="_blank" style="margin-top: 5px;">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <div>
+                <div>
+                    <h1>Get In Touch</h1>
+                </div>
+                <div>
+                    <form class="contact-form fade-in" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section></div><script src="./JS/ab.js"></script></body></html>
