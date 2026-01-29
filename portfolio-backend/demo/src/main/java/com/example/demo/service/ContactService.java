@@ -11,9 +11,8 @@ public class ContactService {
         this.emailService = emailService;
     }
 
-    public void sendMessage(String name, String email, String message) {
-
-        // Send email (primary and only responsibility now)
+    @Async
+    public void sendMailAsync(String name, String email, String message) {
         emailService.sendContactEmail(name, email, message);
     }
 }
