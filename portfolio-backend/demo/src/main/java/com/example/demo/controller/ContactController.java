@@ -21,16 +21,17 @@ public class ContactController {
     public ContactController(EmailService emailService) {
         this.emailService = emailService;
     }
+@PostMapping("/api/contact")
+public ResponseEntity<String> contact(@RequestBody ContactRequest req) {
 
-    @PostMapping
-    public String submitContact(@Valid @RequestBody ContactRequest request) {
+    contactService.sendMailAsync(
+        req.getName(),
+        req.getEmail(),
+        req.getMessage()
+    );
 
-        emailService.sendContactEmail(
-                request.getName(),
-                request.getEmail(),
-                request.getMessage()
-        );
-
-        return "Message sent successfully!";
-    }
+    return ResponseEntity.ok("Message sent successfully!");
 }
+
+}
+
