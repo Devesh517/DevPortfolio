@@ -3,14 +3,14 @@ FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
-# Copy pom first (dependency caching)
+# Copy pom.xml first (for dependency caching)
 COPY pom.xml .
 
 # Download dependencies
 RUN mvn dependency:go-offline
 
 # Copy source code
-COPY src src
+COPY src ./src
 
 # Build the application
 RUN mvn clean package -DskipTests
@@ -21,11 +21,11 @@ FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-# Copy the jar from build stage
+# Copy built jar from build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Render listens on 8080
+# Expose port Render expects
 EXPOSE 8080
 
-# Run Spring Boot
+# Run Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
