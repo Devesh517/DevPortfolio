@@ -1,32 +1,38 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ContactRequest;
-import com.example.demo.service.ContactService;
+import com.example.demo.service.EmailService;
 import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "*") // SAFE for portfolio
+@CrossOrigin(
+        origins = {
+                "http://localhost:5500",
+                "http://127.0.0.1:5500",
+                "https://devesh517.github.io"
+        }
+)
 public class ContactController {
 
-    private final ContactService contactService;
+    private final EmailService emailService;
 
-    public ContactController(ContactService contactService) {
-        this.contactService = contactService;
+    public ContactController(EmailService emailService) {
+        this.emailService = emailService;
     }
 
     @PostMapping
-    public ResponseEntity<String> submitContact(
-            @Valid @RequestBody ContactRequest request
+    public String submitContact(
+            @RequestBody @Valid ContactRequest request
     ) {
-        contactService.sendMessage(
+
+        emailService.sendContactEmail(
                 request.getName(),
                 request.getEmail(),
                 request.getMessage()
         );
 
-        return ResponseEntity.ok("Message sent successfully!");
+        return "Message sent successfully!";
     }
 }
