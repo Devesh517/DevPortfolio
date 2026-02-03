@@ -281,6 +281,109 @@ html {
 .social-links a:hover img {
     transform: scale(1.2);
 }
+.contact-info {
+    padding: 5rem 2rem;
+    background: var(--bg-primary);
+    text-align: center;
+}
+
+.contact-info h1 {
+    font-size: 3rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background: var(--bg-secondary);
+    border-radius: 18px;
+    padding: 30px 20px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--accent-primary);
+    margin-bottom: 12px;
+}
+
+.contact-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.contact-card a,
+.contact-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .contact-info h1 {
+        font-size: 2.2rem;
+    }
+}
+.resume-section {
+    background: var(--bg-secondary);
+    text-align: center;
+}
+.resume-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+.resume-text {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btn-outline {
+    border: 2px solid var(--accent-primary);
+    background: transparent;
+    color: var(--accent-primary);
+}
+.btn-outline:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+@media (max-width: 768px) {
+    .resume-section h1 {
+        font-size: 2.2rem;
+    }
+    .resume-text {
+        font-size: 1rem;
+    }
+}
 
 /* ===== About Section ===== */
 #about {
