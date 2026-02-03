@@ -117,26 +117,9 @@ const observer = new IntersectionObserver((entries) => {
 const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 animatedElements.forEach(el => observer.observe(el));
 
-// Form submission handling
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+
     
-    const submitBtn = contactForm.querySelector('button');
-    const originalText = submitBtn.innerHTML;
     
-    // Show loading state
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
-    
-    // Simulate form submission
-    setTimeout(() => {
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
 
 // Typing effect for the main heading
 const mainHeading = document.querySelector('#rightsection b');
