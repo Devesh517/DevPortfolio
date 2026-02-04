@@ -203,7 +203,7 @@ html {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: fill;
     border: 8px solid var(--accent-primary);
     box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease;
