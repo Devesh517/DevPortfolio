@@ -31,4 +31,4 @@ The website is completely **responsive**, ensuring a seamless experience across 
 ## 🚀 How to Run
 1. Clone this repository  
    ```bash
-   git clone https://github.com/yourusername/DevPortfolio.git
+   git clone https://github.com/Devesh517/DevPortfolio.git
