@@ -6,16 +6,16 @@
     <title>DevPortfolio</title>
     <link rel="icon" type="image/png" href="Images/icon1.png">
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
 
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/st.css">
+    <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
-  <!-- Loading Screen -->
+<!-- Loading Screen -->
     <div class="loading" id="loading">
         <div class="spinner"></div>
     </div>
@@ -26,29 +26,36 @@
     </div>
     
     <div>
-      <!-- NAV BAR -->
+    <!-- NAV BAR -->
         <section id="BAR">
             <nav class="navbar">
-                <div class="navcontainer">
-                    <a href="#" class="logo"><img src="Images/icon2.png" alt="Logo"></a>
-                    <ul class="navmenu" id="navMenu">
-                        <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#skills" class="nav-link">Skills</a></li>
-                        <li><a href="#certify" class="nav-link">Certificate</a></li>
-                        <li><a href="#project" class="nav-link">Projects</a></li>
-                        <li><a href="#contact" class="nav-link">Contact Me</a></li>
-                    </ul>
-                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </button>
-                    <button class="navtoggle" id="navToggle">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
-                </div>
-            </nav>
+    <div class="navcontainer">
+        <a href="#" class="logo"><img src="Images/icon2.png" alt="Logo"></a>
+        <ul class="navmenu" id="navMenu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#certify" class="nav-link">Certificate</a></li>
+            <li><a href="#project" class="nav-link">Projects</a></li>
+            <li><a href="#contact-info" class="nav-link">Contact Me</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="nav-btn" id="themeToggle" title="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+                <span class="nav-btn-label" id="themeLabel">Light</span>
+            </button>
+            <button class="nav-btn" id="glassToggleBtn" title="Toggle glass effect">
+                <i class="fas fa-circle-half-stroke"></i>
+                <span class="nav-btn-label" id="glassLabel">Glass</span>
+            </button>
+        </div>
+        <button class="navtoggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</nav>
         </section>
         
         <!-- Home Section -->
@@ -97,6 +104,9 @@
                 <a href="https://www.hackerrank.com/profile/devesh_dhanwani1" target="_blank">
                     <img src="Images/hackerrank.png" alt="HackerRank">
                 </a>
+                <a href="https://youtube.com/@deveshdhanwani5544?si=6za3he1V6HyYksBO" target="_blank">
+                    <img src="Images/youtube.png" alt="YouTube">
+                </a>
             </div>
         </section>
         
@@ -131,6 +141,7 @@
                     <span class="skl"><img src="Images/c++.png" alt="C++">C++</span>
                     <span class="skl"><img src="Images/html-5 (1).png" alt="HTML">HTML</span>
                     <span class="skl"><img src="Images/css-3.png" alt="CSS">CSS</span>
+                    <span class="skl"><img src="Images/javascript.png" alt="JavaScript">JavaScript</span>
                 </div>
                 <h3>Tools</h3>
                 <div class="skills-group">
@@ -192,7 +203,7 @@
                             <h3 class="certificate-title">Certificate of Completion</h3>
                             <div class="certificate-details">
                                 <p><strong>Issued By:</strong> <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_4puBuTeohkGTAvX3K_1771100971571_completion_certificate.pdf" class="certificate-link" target="_blank">Forage</a></p>
-                                <p><strong>Skill:</strong> SQL</p>
+                                <p><strong>What I learned:</strong> Project Setup, Kafka Integration, Rest API Controller</p>
                             </div>
                         </div>
                     </div>
@@ -209,240 +220,392 @@
                 <div class="pjb">
                     <div class="major">
                         <h3>Major Projects</h3>
-                        <div class="pjcontent">
-                            <h3 class="project-title">TrafficBuddy – Real-Time Smart Route & Traffic Assistant</h3>
-                            <p class="project-description">TrafficBuddy is a smart navigation assistant that helps users find the fastest and most efficient routes using OpenRouteService API along with real-time traffic insights. 
-                                It provides a clean UI, map integration, and options to avoid tolls and highways.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Real-time traffic information</li>
-                                    <li>Smart route calculation</li>
-                                    <li>Avoid tolls and highways option</li>
-                                    <li>Live map using Leaflet.js</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java Spring Boot </span>
-                                <span class="tech-tag">Html</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Java Script</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/TrafficBuddy" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Bio Track – Smart Health Monitoring System</h3>
-                            <p class="project-description">A comprehensive Java and SQL-based health monitoring system developed for Identity Exhibition, featuring multi-language support and advanced health analytics.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Multi-language support(English, Hindi, Bengali, Tamil, Telugu)</li>
-                                    <li>Comprehensive health record management</li>
-                                    <li>Real-time monitoring of vital signs</li>
-                                    <li>Secure user authentication system</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">XAMPP</span>
-                                <span class="tech-tag">Eclipse</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Bio-Track" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Rewear</h3>
-                            <p class="project-description">A web-based platform designed to promote sustainable fashion by enabling users to exchange, swap, and donate unused clothes within a community.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Swap unused clothes with others</li>
-                                    <li>Donate clothes instead of throwing them away</li>
-                                    <li>Earn points for each swap, which can be redeemed later</li>
-                                    <li>Build a community that promotes eco-friendly fashion choices</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Java Script</span>
-                                <!-- <span class="tech-tag">Supabase</span> -->
-                            </div>
-                            <a href="https://github.com/Devesh517/OdooHackthon" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
+                        <div class="mainbox">
+        <div class="img">
+            <img src="./Images/biotrack (2).png" alt="Bio Track">
+        </div>
+        <div class="content">
+            <h1>Bio Track</h1>
+            <!-- <p>Project that i made in the 2023</p> -->
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Secure health monitoring system to store and manage personal medical records.</li>
+                <li>Tracks vital parameters like heart rate, blood pressure, and sugar levels.</li>
+                <li>Multi-language support with 5 regional languages for better accessibility.</li>
+                <li>Add, update, and analyze medical records with real-time health tracking.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>XAMPP</li>
+                        <li>Eclipse</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Bio-Track" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/Traffic Buddy.png" alt="Traffic Buddy">
+        </div>
+        <div class="content">
+            <h1>Traffic Buddy</h1>
+            <p>Project that i made in the 2023</p>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Smart route assistant providing the fastest and most efficient navigation paths.</li>
+                <li>Real-time traffic insights with interactive live map integration.</li>
+                <li>Route customization options to avoid tolls and highways during travel.</li>
+                <li>Clean and responsive interface for smooth navigation experience.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/TrafficBuddy" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/rewear.png" alt="Rewear">
+        </div>
+        <div class="content">
+            <h1>Rewear</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Platform for exchanging and donating unused clothes within the community.</li>
+                <li>Upload, manage, and browse clothing items for easy swapping requests.</li>
+                <li>Point-based reward system encouraging sustainable and eco-friendly fashion.</li>
+                <li>Community-driven initiative promoting clothing reuse and reducing waste.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>MySQL</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/OdooHackthon" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
                     </div>
-                    <div>
+                    </div>
+                    </div>
+                    <div class="major">
                         <h3>Minor Projects</h3>
-                        <div class="pjcontent">
-                            <h3 class="project-title">SmartEdit</h3>
-                            <p class="project-description">SMARTEDIT is a lightweight text editor designed to
-                                provide a simple yet powerful alternative to the default Notepad.It allows users to 
-                                create, edit, and save text documents with additional customization features</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Create, open, and edit text document</li>
-                                    <li>Save files as .txt and .doc formats</li>
-                                    <li>Standard editing options (cut, copy, paste, undo, redo)</li>
-                                    <li>Color customization – change text and background colors</li>
-                                    <li>Open File Dialog & Save File Dialog integration</li>
-                                    <li>Dark and Light Mode Theme Option</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">VB.NET</span>
-                                <span class="tech-tag">Windows Forms</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Notepad" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">String, Array & Pattern Operations</h3>
-                            <p class="project-description">This project allows the user to choose between String Operations, Array Operations, and Pattern Printing.
-After selecting a category, the user can input data and choose specific operations to perform.</p>
-                            <div class="project-features">
-                                <h4>Basic Operation:</h4>
-                                <ul>
-                                    <li>String Operations: reverse, word order reverse, capitalize first letters</li>
-                                    <li>Array Operations: Sorting (Bubble, Selection), Insertion, Deletion, Search (Binary & Linear)</li>
-                                    <li>Pattern Printing: K-pattern, triangle, reverse triangle, and more (9+ patterns)</li>
-                                    <li>Return to the main screen, Change input and Change operation</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Project1" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Student Management</h3>
-                            <p class="project-description">A console-based School Management System built using Python, OpenPyXL, and ReportLab.
-This project helps manage students, teachers, classes, attendance, marks, salary, and report cards using Excel files and PDF generation.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li> Add single or multiple students</li>
-                                    <li>Update student details (name, DOB, address, phone)</li>
-                                    <li>Automatic age calculation from DOB</li>
-                                    <li> Create classes with sections and subjects</li>
-                                    <li>Prevent duplicate classes or sections</li>
-                                    <li>Assign teachers as Class Teacher or Subject Teacher</li>
-                                    <li>Mark daily attendance (P/A)</li>
-                                    <li>Admin login (fixed credentials) Teacher login using stored credentials</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">OpenPyXL</span>
-                                <span class="tech-tag">ReportLab</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/School-Management" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Ascii Art</h3>
-                            <p class="project-description">A customizable ASCII Art Generator written in Python that converts
-                                characters, words, numbers, and symbols into ASCII-styled text. It also supports advanced features
-                                like background colors (CUI), font scaling, ASCII logos, and saving output to a file.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Convert single characters, words, alphabets, and numbers into ASCII art</li>
-                                    <li>ASCII art logos (Heart, Diamond, Smile)</li>
-                                    <li> Save last generated ASCII art to a .txt file</li>
-                                    <li>  Supports 5×5 custom ASCII font</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Ascii-Art" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Virasat Cafe</h3>
-                            <p class="project-description">A modern, elegant, and responsive website for Virasat Café, designed to give
-                                visitors a warm and inviting experience of Indian café culture.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li> Landing Page with home section introducing Virasat Café</li>
-                                    <li>About Section – Story and vision behind the café</li>
-                                    <li>Menu Section – Curated café specials with elegant styling</li>
-                                    <li> Gallery Section – Showcase of food, ambiance, and café vibes</li>
-                                    <li>Contact Section – Café address, social links, and quick contact form</li>
-                                    <li>Responsive design for desktop and mobile screens</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">Css</span>
-                                <span class="tech-tag">Java Script</span>
-                                <span class="tech-tag">Git Hub Pages(For Hosting)</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Virasat-Cafe" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                            <a href="https://devesh517.github.io/Virasat-Cafe/" class="btn btn-primary" target="_blank" style="margin-top: 5px;">
-                                
-                                Live Demo
-                            </a>
-                        </div>
-                        <div class="pjcontent">
-                            <h3 class="project-title">Go Green</h3>
-                            <p class="project-description">GO-Green is a responsive and user-friendly website designed to educate and
-                                encourage people to adopt eco-friendly habits. The website provides information about sustainability,
-                                showcases eco-friendly initiatives, and allows users to get in touch with us.This project was developed for our college
-                                hackathon by Devesh Dhanwani and Harpreet Kaur to promote awareness about sustainable living and eco-friendly practices.</p>
-                            <div class="project-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>Fully responsive design for desktops, tablets, and mobile devices.</li>
-                                    <li>Clean, user-friendly UI with intuitive navigation.</li>
-                                    <li>Informative content focused on sustainability and social responsibility.</li>
-                                    <li>Interactive contact form for easy communication.</li>
-                                    <li>Organized gallery to display images and eco-friendly initiatives.</li>
-                                </ul>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Java Script</span>
-                            </div>
-                            <a href="https://github.com/Devesh517/Go-Green" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                            <a href="https://devesh517.github.io/Go-Green/" class="btn btn-primary" target="_blank" style="margin-top: 5px;">
-                                Live Demo
-                            </a>
-                        </div>
+                        <div class="mainbox">
+        <div class="img">
+            <img src="./Images/asciiart.png" alt="Ascii Art">
+        </div>
+        <div class="content">
+            <h1>Ascii Art</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Converts text, numbers, and symbols into customizable ASCII-style art.</li>
+                <li>Includes creative ASCII logos like hearts, diamonds, and smile designs..</li>
+                <li>Interactive CUI-based menu system with terminal background color support.</li>
+                <li>Save generated ASCII art into text files with expandable customization options.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Ascii-Art" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/schoolmanagement.png" alt="School Management">
+        </div>
+        <div class="content">
+            <h1>School Management</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Full-stack school management system with student, teacher, and class handling.</li>
+                <li>Manage attendance, marks, assignments, salaries, and report card generation.</li>
+                <li>Automatic Excel export and PDF generation for reports and salary slips.</li>
+                <li>REST API integration with a responsive frontend dashboard interface.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python(Flask)</li>
+                        <li>OpenPYXL</li>
+                        <li>ReportLab</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/School-Management" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div><div class="mainbox">
+        <div class="img">
+            <img src="./Images/gogreen.jpeg" alt="Go Green">
+        </div>
+        <div class="content">
+            <h1>Go Green</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Responsive website promoting sustainable living and eco-friendly awareness.</li>
+                <li>Informative sections highlighting sustainability, social impact, and green practices.</li>
+                <li>Organized gallery showcasing eco-friendly initiatives and environmental projects.</li>
+                <li>Interactive contact form with clean and user-friendly navigation experience.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Go-Green" target="_blank" rel="noopener noreferrer">View Project</a>
+            <a href="https://devesh517.github.io/Go-Green/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/virasatcafe.png" alt="Virasat Cafe">
+        </div>
+        <div class="content">
+            <h1>Virasat Cafe</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Modern café website showcasing Indian café culture with elegant design.</li>
+                <li>Interactive menu and gallery sections highlighting food and café ambiance.</li>
+                <li>Responsive layout optimized for both desktop and mobile devices.</li>
+                <li>Contact section with café details, social links, and quick inquiry form.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Virasat-Cafe" target="_blank" rel="noopener noreferrer">View Project</a>
+                <a href="https://devesh517.github.io/Virasat-Cafe/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/aquasafe.png" alt="Aqua Safe">
+        </div>
+        <div class="content">
+            <h1>Aqua Safe</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Web-based groundwater monitoring system that calculates HMPI using WHO/BIS safety standards.</li>
+                <li>Visualizes contamination data through interactive charts, graphs, and color-coded pollution indicators.</li>
+                <li>Smart geo-mapping with coordinate-based city detection and pollution-level map markers.</li>
+                <li>Supports downloadable CSV, JSON, and printable PDF reports for analysis and documentation.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Aqua-Safe" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/smartedit.jpeg" alt="Smart Edit">
+        </div>
+        <div class="content">
+            <h1>Smart Edit</h1>
+            <p>Project that i made in the 2023</p>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Desktop-based text editor providing a lightweight alternative to traditional Notepad.</li>
+                <li>Create, open, edit, and save documents in both .txt and .doc formats.</li>
+                <li>Includes standard editing tools like cut, copy, paste, undo, and redo operations.</li>
+                <li>Customizable interface with text/background color options and file dialog integration.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>VB.NET</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Visual Studio 2012</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Notepad" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="mainbox">
+        <div class="img">
+            <img src="./Images/stringarraypattern.png" alt="String Array Pattern">
+        </div>
+        <div class="content">
+            <h1>String Array Pattern</h1>
+            <div class="featurelist">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Menu-driven Java application demonstrating string, array, and pattern-based operations.</li>
+                <li>Performs string functions like reversing, insertion, and capitalization handling.</li>
+                <li>Supports array operations including insertion, deletion, searching, sorting, and traversal.</li>
+                <li>Generates multiple console patterns such as triangles, pyramids, and square designs.</li>
+            </ul>
+            </div>
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h4>Languages & Frameworks</h4>
+                    <ul>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="meta-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-group">
+            <a href="https://github.com/Devesh517/Project1" target="_blank" rel="noopener noreferrer">View Project</a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer">Live Demo</a> -->
+        </div>
+        </div>
+    </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact-info" class="contact-info fade-in">
     <h1>Contact Details</h1>
-
     <div class="contact-grid">
         <div class="contact-card">
             <i class="fas fa-envelope"></i>
@@ -451,7 +614,6 @@ This project helps manage students, teachers, classes, attendance, marks, salary
                 devesh.dhanwani2005@gmail.com
             </a>
         </div>
-
         <div class="contact-card">
             <i class="fas fa-phone"></i>
             <h4>Phone</h4>
@@ -459,7 +621,6 @@ This project helps manage students, teachers, classes, attendance, marks, salary
                 +91 6350537767
             </a>
         </div>
-
         <div class="contact-card">
             <i class="fas fa-location-dot"></i>
             <h4>Location</h4>
@@ -467,7 +628,6 @@ This project helps manage students, teachers, classes, attendance, marks, salary
         </div>
     </div>
 </section>
-
         <!-- Contact Section -->
         <section id="contact">
             <div>
@@ -497,5 +657,4 @@ This project helps manage students, teachers, classes, attendance, marks, salary
             </div>
         </section></div><script src="./JS/ab.js"></script>
         <script src="./JS/contact.js"></script>
-    
     </body></html>
