@@ -234,17 +234,12 @@ html {
 
 @media (max-width: 480px) {
     #glassToggleBtn {
-        font-size: 0;        /* hide text */
+        font-size: 1rem;
         padding: 0.5rem;
         width: 40px;
         height: 40px;
         justify-content: center;
         border-radius: 50%;
-    }
-    /* Show a glass icon via pseudo-element */
-    #glassToggleBtn::before {
-        content: '🪟';
-        font-size: 1rem;
     }
 }
 
@@ -1036,7 +1031,24 @@ html {
     #rightsection p { margin: 0 auto; }
     #ph1 { width: 220px; height: 220px; }
 
-    .mainbox { height: auto; }
+    .major {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+    .major h3 {
+        order: 0;
+        grid-column: 1 / -1;
+        margin-bottom: 0.85rem;
+        text-align: left;
+    }
+    .mainbox {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
     .img { position: relative; inset: auto; height: 200px; }
     .content {
         position: relative;

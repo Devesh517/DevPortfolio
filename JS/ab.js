@@ -247,6 +247,17 @@ document.head.appendChild(rippleStyle);
                 e.preventDefault();
             });
 
+            this.container.addEventListener('touchstart', (e) => {
+                if (e.touches.length !== 1) return;
+                isDragging = true;
+                this.container.style.cursor = 'grabbing';
+                const touch = e.touches[0];
+                startX = touch.clientX; startY = touch.clientY;
+                const rect = this.container.getBoundingClientRect();
+                initialX = rect.left; initialY = rect.top;
+                e.preventDefault();
+            }, { passive: false });
+
             document.addEventListener('mousemove', (e) => {
                 if (isDragging) {
                     const c = this.constrainPosition(initialX + e.clientX - startX, initialY + e.clientY - startY);
@@ -260,7 +271,30 @@ document.head.appendChild(rippleStyle);
                 if (this.mouseUsed) this.updateShader();
             });
 
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging && e.touches.length === 1) {
+                    const touch = e.touches[0];
+                    const c = this.constrainPosition(initialX + touch.clientX - startX, initialY + touch.clientY - startY);
+                    this.container.style.left = c.x + 'px';
+                    this.container.style.top = c.y + 'px';
+                    this.container.style.transform = 'none';
+                    e.preventDefault();
+                }
+                const rect = this.container.getBoundingClientRect();
+                const touch = e.touches[0];
+                if (touch) {
+                    this.mouse.x = (touch.clientX - rect.left) / rect.width;
+                    this.mouse.y = (touch.clientY - rect.top) / rect.height;
+                    if (this.mouseUsed) this.updateShader();
+                }
+            }, { passive: false });
+
             document.addEventListener('mouseup', () => {
+                isDragging = false;
+                this.container.style.cursor = 'grab';
+            });
+
+            document.addEventListener('touchend', () => {
                 isDragging = false;
                 this.container.style.cursor = 'grab';
             });
