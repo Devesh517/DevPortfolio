@@ -12,7 +12,7 @@
 
   const STORAGE_KEY = 'accentTheme';
 
-<<<<<<< HEAD
+
   function hexToRgba(hex, alpha) {
     if (!hex || hex[0] !== '#') return '';
     const r = parseInt(hex.slice(1, 3), 16);
@@ -21,8 +21,7 @@
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
-=======
->>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
+
   function applyTheme(theme) {
     const root = document.documentElement;
     if (!theme.primary) {
@@ -30,11 +29,10 @@
       root.style.removeProperty('--user-accent-primary');
       root.style.removeProperty('--user-accent-secondary');
       root.style.removeProperty('--user-accent-gradient');
-<<<<<<< HEAD
+
       root.style.removeProperty('--accent-glow');
       root.style.removeProperty('--accent-subtle');
-=======
->>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
+
       return;
     }
     root.style.setProperty('--user-accent-primary', theme.primary);
@@ -43,18 +41,18 @@
       '--user-accent-gradient',
       `linear-gradient(135deg, ${theme.primary} 0%, ${theme.secondary} 100%)`
     );
-<<<<<<< HEAD
+
     root.style.setProperty('--accent-glow', hexToRgba(theme.primary, 0.28));
     root.style.setProperty('--accent-subtle', hexToRgba(theme.primary, 0.09));
   }
 
   function buildSwatches(panel, onPick) {
     panel.innerHTML = '';
-=======
+
   }
 
   function buildSwatches(panel, onPick) {
->>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
+
     THEMES.forEach((theme) => {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -103,8 +101,4 @@
     const saved = THEMES.find((t) => t.name === savedName);
     if (saved) applyTheme(saved);
   });
-<<<<<<< HEAD
 })();
-=======
-})();
->>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
