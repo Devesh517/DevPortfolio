@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.demo.dto;
 
 import jakarta.validation.constraints.Email;
@@ -39,3 +40,46 @@ public class ContactRequest {
         this.message = message;
     }
 }
+=======
+package com.example.demo.dto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public class ContactRequest {
+
+    @NotBlank
+    private String name;
+
+    @Email
+    @NotBlank
+    private String email;
+
+    @NotBlank
+    private String message;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}
+>>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951

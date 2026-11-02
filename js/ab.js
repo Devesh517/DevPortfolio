@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ===================================================================
 // DEVESH DHANWANI - PORTFOLIO INTERACTION ENGINE
 // Clean, Modular, Production-Safe JavaScript
@@ -252,6 +253,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 11. Subtle Button Ripple Effect
     document.querySelectorAll('.btn, .nav-btn, .project-btn').forEach(button => {
+=======
+// Loading screen
+window.addEventListener('load', () => {
+    const loading = document.getElementById('loading');
+    setTimeout(() => {
+        loading.classList.add('hidden');
+    }, 1000);
+});
+
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    const current = body.getAttribute('data-theme');
+    const newTheme = current === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    const lbl = document.getElementById('themeLabel');
+    if (lbl) lbl.textContent = theme === 'dark' ? 'Dark' : 'Light';
+}
+
+// Mobile navigation
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Smooth scrolling
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Active navigation highlighting
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Scroll to top
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Intersection Observer for animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => observer.observe(el));
+
+// Typing effect
+const mainHeading = document.querySelector('#rightsection b');
+if (mainHeading) {
+    const text = mainHeading.textContent;
+    mainHeading.textContent = '';
+    let i = 0;
+    const typeWriter = () => {
+        if (i < text.length) {
+            mainHeading.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    };
+    setTimeout(typeWriter, 1000);
+}
+
+// Ripple effect
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('button, a[href^="#"], .btn').forEach(button => {
+>>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
         button.addEventListener('click', function(e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
@@ -273,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => ripple.remove(), 600);
         });
     });
+<<<<<<< HEAD
 
     const rippleStyle = document.createElement('style');
     rippleStyle.textContent = `@keyframes ripple { to { transform: scale(4); opacity: 0; } }`;
@@ -319,6 +442,13 @@ window.addEventListener('load', () => {
         }
     }
 })();
+=======
+});
+
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `@keyframes ripple { to { transform: scale(4); opacity: 0; } }`;
+document.head.appendChild(rippleStyle);
+>>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
 
 // =============================================
 // Liquid Glass Effect
@@ -356,7 +486,10 @@ window.addEventListener('load', () => {
 
         createElement() {
             this.container = document.createElement('div');
+<<<<<<< HEAD
             this.container.className = 'liquid-lens';
+=======
+>>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
             this.container.style.cssText = `
                 position: fixed; top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
@@ -548,6 +681,7 @@ window.addEventListener('load', () => {
         }
     }
 
+<<<<<<< HEAD
     const glassBtn = document.getElementById('glassToggleBtn');
     const glassLabel = document.getElementById('glassLabel');
 
@@ -568,4 +702,24 @@ window.addEventListener('load', () => {
     if (glassBtn) {
         glassBtn.addEventListener('click', () => setGlass(!window.liquidGlass));
     }
+=======
+    // Wire up the glass button that's already in the HTML navbar
+    const glassBtn = document.getElementById('glassToggleBtn');
+    const glassLabel = document.getElementById('glassLabel');
+
+    if (glassBtn) {
+        glassBtn.addEventListener('click', () => {
+            if (window.liquidGlass) {
+                destroyLiquidGlass();
+                if (glassLabel) glassLabel.textContent = 'Glass';
+                glassBtn.title = 'Enable glass effect';
+            } else {
+                createLiquidGlass();
+                if (glassLabel) glassLabel.textContent = 'Glass On';
+                glassBtn.title = 'Disable glass effect';
+            }
+        });
+    }
+
+>>>>>>> 91dfbdb218c8f09c717a3440ab00b8598a501951
 })();
